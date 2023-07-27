@@ -24,7 +24,7 @@ to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		prompt := promptui.Select{
 			Label: "どのゲームで遊びますか？",
-			Items: []string{"○×ゲーム", "ガチャ", "ガチャ(サンプル)"},
+			Items: []string{"○×ゲーム", "ガチャ", "ガチャ(サンプル)", "クイズ"},
 		}
 
 		_, result, err := prompt.Run()
@@ -41,6 +41,8 @@ to quickly create a Cobra application.`,
 			game.Gacha()
 		case "ガチャ(サンプル)":
 			game.GachaSample()
+		case "クイズ":
+			game.Quiz()
 		}
 	},
 }

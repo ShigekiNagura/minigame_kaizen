@@ -2,6 +2,7 @@ package game
 
 import (
 	"fmt"
+	"time"
 
 	"github.com/manifoldco/promptui"
 )
@@ -33,6 +34,16 @@ func GachaSample() {
 	case "7（1%）":
 		charactor = charactorLevel7[0]
 	}
+
+	fmt.Println("ガチャン")
+	// sound("door_lock")
+	time.Sleep(1500 * time.Millisecond)
+	fmt.Println("ガラガラ...")
+	// sound("gatyagatya")
+	time.Sleep(1500 * time.Millisecond)
+	fmt.Println("ポン！")
+	// sound("level_up")
+	time.Sleep(1500 * time.Millisecond)
 
 	fmt.Println(charactor.Image)
 	fmt.Println("なまえ : ", charactor.Name)
